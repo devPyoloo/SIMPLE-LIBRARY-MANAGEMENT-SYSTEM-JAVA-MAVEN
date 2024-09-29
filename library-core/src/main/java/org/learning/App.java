@@ -21,7 +21,9 @@ public class App
             System.out.println("4. Add new user");
             System.out.println("5. View list of books");
             System.out.println("6. View list of users");
-            System.out.println("7. Exit");
+            System.out.println("7. Search book");
+            System.out.println("8. Search user");
+            System.out.println("9. Exit");
             System.out.println();
             System.out.println("Please select an option (1-7)");
             int choice = scanner.nextInt();
@@ -108,6 +110,26 @@ public class App
                     break;
 
                 case 7:
+                    System.out.println("Selected Option: "+choice);
+
+                    System.out.println("Search/Find Book");
+                    String findBook = scanner.nextLine();
+
+                    bookService.searchBook(findBook);
+
+
+
+                    break;
+
+                case 8:
+                    System.out.println("Selected Option: "+choice);
+                    System.out.println("Search/Find");
+                    String findUser = scanner.nextLine();
+
+                    userService.searchUser(findUser);
+                    break;
+
+                case 9:
                     System.out.println("Selected Option: "+choice);
                     System.out.println("Exiting the application. Thank you for using it!");
                     running = false;
